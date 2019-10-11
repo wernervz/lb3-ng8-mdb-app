@@ -1,0 +1,49 @@
+{
+  "name": "lb3-ng8-mdb-app",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "bsync": "browser-sync start --proxy \"localhost:3000\" --port 3001 --files \"dist/client/**/*.*\" --browser \"/Applications/Google Chrome.app\"",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "build:client": "(cd ./client && npm run build)",
+    "build:client-prod": "(cd ./client && npm run build-prod)",
+    "start": "path-exists dist/client && node . || echo 'no built client detected.'",
+    "serve": "(cd ./client && npm run build) && concurrently \"node .\" \"sleep 15 && opener http://localhost:3000\"",
+    "watch:client": "(cd ./client && npm run develop)",
+    "watch:server": "nodemon --watch ./server",
+    "init": "npm install",
+    "develop": "concurrently \"npm run watch:client\" \"npm run watch:server\" \"sleep 15 && npm run bsync\"",
+    "test": "jasmine"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "compression": "^1.0.3",
+    "concurrently": "^4.1.2",
+    "cors": "^2.5.2",
+    "helmet": "^3.10.0",
+    "ibm-cos-sdk": "^1.5.2",
+    "ibm-watson": "^4.5.1",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "multer": "^1.4.2",
+    "pino": "^5.13.3",
+    "pino-pretty": "^3.2.1",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "Apache-2.0",
+  "description": "lb3-ng8-mdb-app"
+}
