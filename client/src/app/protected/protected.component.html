@@ -1,0 +1,18 @@
+<div class="alert alert-success" role="alert" *ngIf="isSuccess">
+    <button type="button" class="close" aria-label="Close" (click)="closeAlert()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    {{successMsg}}
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="isError">
+    <button type="button" class="close" aria-label="Close" (click)="closeAlert()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    {{errorMsg}}
+</div>
+<p>This is the protected area that can only be accessed once the user logs in.</p>
+<p>The API exposed by the Loopback server is also protected.</p>
+<form #demoForm (ngSubmit)="callDemoApi()">
+    <input class="form-control mb-4" type="input" name="message" [(ngModel)]="message">
+    <button mdbBtn color="info" class="my-4" type="submit">Call Demo Api</button>
+</form>

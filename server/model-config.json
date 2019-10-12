@@ -13,8 +13,32 @@
       "./mixins"
     ]
   },
+  "ApiUser": {
+    "dataSource": "db",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "find": true,
+          "create": true,
+          "deleteById": true,
+          "exists": true,
+          "replaceById": true,
+          "changePassword": true,
+          "login": true,
+          "logout": true,
+          "isInRole": true,
+          "prototype.__destroyById__accessTokens": true,
+          "prototype.__findById__accessTokens": true,
+          "prototype.__get__accessTokens": true
+        }
+      }
+    }
+  },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -34,5 +58,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Demo": {
+    "dataSource": null,
+    "public": true
   }
 }

@@ -1,0 +1,25 @@
+{
+  "ids": {
+    "User": 1,
+    "ApiUser": 3,
+    "AccessToken": 4,
+    "ACL": 1,
+    "RoleMapping": 2,
+    "Role": 2
+  },
+  "models": {
+    "User": {},
+    "ApiUser": {
+      "1": "{\"username\":\"admin\",\"password\":\"$2a$10$OfC6rsgiDgrfGtqT7h9WB.evQzTiQuTeLcvNkSo8Gvj8Nntl7Ckbu\",\"email\":\"admin@acme.com\",\"roles\":[\"admin\"],\"id\":1}",
+      "2": "{\"username\":\"guest\",\"password\":\"$2a$10$AFTw2ZrbovOnohTtZhXLDuOs.KeFpT6SqFZMo5Hep7Ex0Q31n7Xhm\",\"email\":\"guest@acme.com\",\"id\":2}"
+    },
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {
+      "1": "{\"principalType\":\"USER\",\"principalId\":\"1\",\"roleId\":1,\"id\":1}"
+    },
+    "Role": {
+      "1": "{\"name\":\"admin\",\"created\":\"2019-10-11T22:17:09.740Z\",\"modified\":\"2019-10-11T22:17:09.740Z\",\"id\":1}"
+    }
+  }
+}
