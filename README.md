@@ -35,6 +35,7 @@ Development and testing of the framework was done in VSCode.
 
 * Windows will sometimes take longer to compile the Angular frontend.  You might need to increase the sleep time to 60 seconds in the package.json `develop` scripts.  Modify the value 15000 to 60000.  Alternatively, you can also set a SLEEP environment variable to the value you want to sleep.
 * You can also modify the port used by the application.  The default is 3000 and 3001 for BroswerSync.  Modify the package.json or set the environment variables PORT and BPORT, respectively.
+* Browser-sync will try and start Chrome when it loads the application into the browser.  The browser is currently set to a macOS part and must be modified to the Windows path.
 
 ## Users and Access Control
 
